@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="cube.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cube</title>
+</head>
+<body> 
+    
+ <div class="big">
+
+
+    <div class="top">
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
+    <div class="bottom">
+        <i></i>
+        <i></i>
+        <i></i>
+       <b style="--i:1" class="left"></b>
+       <b style="--i:2"  class="left"></b>
+       <b style="--i:3"  class="left"></b>
+       <b style="--i:4"  class="left"></b>
+       <b style="--i:5"  class="left"></b>
+       <b style="--i:6"  class="left"></b>
+       <b style="--j:1" class="right"></b>
+       <b style="--j:2"  class="right"></b>
+       <b style="--j:3"  class="right"></b>
+       <b style="--j:4"  class="right"></b>
+    </div>
+    
+    <span class="one">
+       <b id="saat"></b>
+       <b id="vaxt"></b>
+     
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+    </span>
+    <span class="two">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        
+    </span>
+    <span class="three">
+       
+        <ion-icon name="logo-apple"></ion-icon>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>   
+        <i></i>
+        <i></i>  
+        <i></i>      
+    </span>
+    <span class="four">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+    </span>
+ </div> 
+ <script>
+  
+  
+    
+const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const day=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]
+function zaman(){
+
+const d = new Date();
+
+let name = month[d.getMonth()];
+let dname=day[d.getDay()]
+
+document.getElementById("vaxt").innerHTML = dname +","+name +" "+d.getDate();
+let x=document.getElementById('saat').innerHTML=d.getHours()+":"+d.getMinutes()
+
+
+}
+setInterval(zaman,1000)
+    </script> 
+     
+  
+    </script>
+
+ <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+ <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
